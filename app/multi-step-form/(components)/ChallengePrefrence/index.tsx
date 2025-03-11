@@ -11,13 +11,15 @@ const ChallengePreference: React.FC<ChallengeLevelProps> = ({
 }) => {
   return (
     <>
-      <div className="text-2xl font-medium">Challenge Preference</div>
-      <div className="text-sm mt-2 text-gray-500">
+      <div className="lg:text-2xl text-xl font-medium">
+        Challenge Preference
+      </div>
+      <div className="lg:text-sm text-xs mt-2 text-gray-500">
         Please tell us which frontend challenges you would like to participate
         in.
       </div>
 
-      <div className="mt-5 flex justify-between items-center font-medium gap-10">
+      <div className="mt-5 flex lg:flex-nowrap flex-wrap justify-between items-center font-medium lg:gap-10 gap-3">
         <div
           onClick={() =>
             setFormData((prev) => ({
@@ -29,7 +31,7 @@ const ChallengePreference: React.FC<ChallengeLevelProps> = ({
             formData?.challengePref === "HTML/CSS/JS"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } hover:border-[#E96A49] p-3 py-4 rounded-md w-1/2 cursor-pointer`}
+          } hover:border-[#E96A49] p-3 py-4 rounded-md lg:w-1/2 w-full cursor-pointer`}
         >
           <input
             type="checkbox"
@@ -51,7 +53,7 @@ const ChallengePreference: React.FC<ChallengeLevelProps> = ({
             formData?.challengePref === "ReactJs"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } p-3 py-4 hover:border-[#E96A49] rounded-md w-1/2 cursor-pointer`}
+          } p-3 py-4 hover:border-[#E96A49] rounded-md lg:w-1/2 w-full cursor-pointer`}
         >
           <input
             type="checkbox"
@@ -63,7 +65,7 @@ const ChallengePreference: React.FC<ChallengeLevelProps> = ({
         </div>
       </div>
 
-      <div className="mt-5 flex justify-between items-center font-medium gap-10">
+      <div className="lg:mt-5 mt-3 flex lg:flex-nowrap flex-wrap justify-between items-center font-medium lg:gap-10 gap-3">
         <div
           onClick={() =>
             setFormData((prev) => ({
@@ -75,7 +77,7 @@ const ChallengePreference: React.FC<ChallengeLevelProps> = ({
             formData?.challengePref === "Angular JS"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } hover:border-[#E96A49] p-3 py-4 rounded-md w-1/2 cursor-pointer`}
+          } hover:border-[#E96A49] p-3 py-4 rounded-md lg:w-1/2 w-full cursor-pointer`}
         >
           <input
             type="checkbox"
@@ -97,7 +99,7 @@ const ChallengePreference: React.FC<ChallengeLevelProps> = ({
             formData?.challengePref === "View.js"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } hover:border-[#E96A49] p-3 py-4 rounded-md w-1/2 cursor-pointer`}
+          } hover:border-[#E96A49] p-3 py-4 rounded-md lg:w-1/2 w-full cursor-pointer`}
         >
           <input
             type="checkbox"

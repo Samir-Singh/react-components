@@ -11,13 +11,15 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
 }) => {
   return (
     <>
-      <div className="text-2xl font-medium">Personal Information</div>
-      <div className="text-sm mt-2 text-gray-500">
+      <div className="lg:text-2xl text-xl font-medium">
+        Personal Information
+      </div>
+      <div className="lg:text-sm text-xs mt-2 text-gray-500">
         Please provide your personal details so we can get to know you better.
       </div>
 
-      <div className="mt-5 flex justify-between gap-10 text-sm">
-        <div className="w-1/2">
+      <div className="mt-5 flex flex-wrap lg:flex-nowrap justify-between lg:gap-10 gap-3 text-sm">
+        <div className="lg:w-1/2 w-full">
           <div>Full Name</div>
           <input
             value={formData?.name}
@@ -32,13 +34,13 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
             placeholder="your name"
             className={`border ${
               formData?.nameError ? "border-[#BF0E00]" : "border-gray-300"
-            } rounded-md mt-2 w-full p-2 outline-none focus-within:border focus-within:border-[#E96A49]`}
+            } rounded-md mt-2 w-full lg:p-2 p-3 outline-none focus-within:border focus-within:border-[#E96A49]`}
           />
           {formData?.nameError && (
             <p className="text-xs mt-1 text-[#BF0E00]">{formData?.nameError}</p>
           )}
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2 w-full">
           <div>Email Address</div>
           <input
             value={formData?.email}
@@ -53,7 +55,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
             placeholder="name@email.com"
             className={`border ${
               formData?.emailError ? "border-[#BF0E00]" : "border-gray-300"
-            } rounded-md mt-2 w-full p-2 outline-none focus-within:border focus-within:border-[#E96A49]`}
+            } rounded-md mt-2 w-full lg:p-2 p-3 outline-none focus-within:border focus-within:border-[#E96A49]`}
           />
           {formData?.emailError && (
             <p className="text-xs mt-1 text-[#BF0E00]">
@@ -63,8 +65,8 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
         </div>
       </div>
 
-      <div className="mt-5 flex justify-between gap-10 text-sm">
-        <div className="w-1/2">
+      <div className="lg:mt-5 mt-3 flex justify-between lg:flex-nowrap flex-wrap lg:gap-10 gap-3 text-sm">
+        <div className="lg:w-1/2 w-full">
           <div>Phone Number</div>
           <input
             value={formData?.number}
@@ -80,7 +82,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
             maxLength={10}
             className={`border ${
               formData?.numberError ? "border-[#BF0E00]" : "border-gray-300"
-            } rounded-md mt-2 w-full p-2 outline-none focus-within:border focus-within:border-[#E96A49]`}
+            } rounded-md mt-2 w-full lg:p-2 p-3 outline-none focus-within:border focus-within:border-[#E96A49]`}
           />
           {formData?.numberError && (
             <p className="text-xs mt-1 text-[#BF0E00]">
@@ -88,7 +90,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
             </p>
           )}
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2 w-full">
           <div>Portfolio/Github Link</div>
           <input
             value={formData?.portfolio}
@@ -103,7 +105,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
             placeholder="github.com/username"
             className={`border ${
               formData?.portFolioError ? "border-[#BF0E00]" : "border-gray-300"
-            } rounded-md mt-2 w-full p-2 outline-none focus-within:border focus-within:border-[#E96A49]`}
+            } rounded-md mt-2 w-full lg:p-2 p-3 outline-none focus-within:border focus-within:border-[#E96A49]`}
           />
           {formData?.portFolioError && (
             <p className="text-xs mt-1 text-[#BF0E00]">

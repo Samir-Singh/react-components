@@ -25,12 +25,12 @@ const StarRating = () => {
         Star Rating Component
       </div>
 
-      <div className="h-screen w-screen flex justify-center items-center">
+      <div className="min-h-screen max-w-screen flex justify-center items-center">
         <div
           style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-          className="bg-white rounded-xl py-10 px-14 w-[600px]"
+          className="bg-white rounded-xl py-10 lg:px-14 px-5 lg:w-[600px] w-[375px]"
         >
-          <div className="text-xl font-medium text-center">
+          <div className="lg:text-xl font-medium text-center">
             How many stars would you give to our Online Code Editor?
           </div>
           <div className="flex justify-center items-center mt-5">
@@ -40,7 +40,7 @@ const StarRating = () => {
               onChange={(value) => setValue(value)}
             />
           </div>
-          <div className="text-center mt-5 text-sm">
+          <div className="text-center mt-5 lg:text-sm text-xs">
             {ratingMessage[value - 1]}
           </div>
         </div>

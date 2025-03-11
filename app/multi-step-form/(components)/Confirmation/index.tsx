@@ -7,13 +7,13 @@ interface ConfirmationProps {
 const Confirmation: React.FC<ConfirmationProps> = ({ formData }) => {
   return (
     <>
-      <div className="text-2xl font-medium">Review and Confirm</div>
-      <div className="text-sm mt-2 text-gray-500">
+      <div className="lg:text-2xl text-xl font-medium">Review and Confirm</div>
+      <div className="lg:text-sm text-xs mt-2 text-gray-500">
         Please review your information to make sure everything is accurate.
       </div>
 
-      <div className="mt-5 flex justify-between items-center font-medium gap-3">
-        <div className="w-[33%] bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
+      <div className="mt-5 flex lg:flex-nowrap flex-wrap justify-between items-center font-medium gap-3">
+        <div className="lg:w-[33%] w-full bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
           <div className="font-normal text-[#59595C]">Full Name</div>
           <p
             title={formData?.name}
@@ -22,7 +22,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({ formData }) => {
             {formData?.name || ""}
           </p>
         </div>
-        <div className="w-[33%] bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
+        <div className="lg:w-[33%] w-full bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
           <div className="font-normal text-[#59595C]">Email Address</div>
           <p
             title={formData?.email}
@@ -31,14 +31,14 @@ const Confirmation: React.FC<ConfirmationProps> = ({ formData }) => {
             {formData?.email || ""}
           </p>
         </div>
-        <div className="w-[33%] bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
+        <div className="lg:w-[33%] w-full bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
           <div className="font-normal text-[#59595C]">Phone Number</div>
           <div className="mt-1">+91 {formData?.number}</div>
         </div>
       </div>
 
-      <div className="mt-5 flex justify-between items-center font-medium gap-3">
-        <div className="w-[33%] bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
+      <div className="lg:mt-5 mt-3 flex lg:flex-nowrap flex-wrap justify-between items-center font-medium gap-3">
+        <div className="lg:w-[33%] w-full bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
           <div className="font-normal text-[#59595C]">
             Portfolio/Github Link
           </div>
@@ -49,11 +49,11 @@ const Confirmation: React.FC<ConfirmationProps> = ({ formData }) => {
             {formData?.portfolio}
           </p>
         </div>
-        <div className="w-[33%] bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
+        <div className="lg:w-[33%] w-full bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
           <div className="font-normal text-[#59595C]">Skill Level</div>
           <div className="mt-1">{formData?.skillLevel}</div>
         </div>
-        <div className="w-[33%] bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
+        <div className="lg:w-[33%] w-full bg-[#F2F3F5] px-5 py-3 rounded-md text-xs">
           <div className="font-normal text-[#59595C]">Challenge Preference</div>
           <div className="mt-1">{formData?.challengePref}</div>
         </div>

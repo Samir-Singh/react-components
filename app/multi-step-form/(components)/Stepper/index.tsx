@@ -36,7 +36,7 @@ const Stepper: React.FC<StepperProps> = ({
                   backgroundColor:
                     index + 1 < currentStep ? primaryColor : secondaryColor,
                 }}
-                className="w-32 h-1.5 mx-2 rounded-4xl transition-all duration-500"
+                className="lg:w-32 w-10 h-1.5 mx-2 rounded-4xl transition-all duration-500"
               ></div>
             )}
           </React.Fragment>

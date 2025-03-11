@@ -11,18 +11,18 @@ interface SkillLevelProps {
 const SkillLevel: React.FC<SkillLevelProps> = ({ formData, setFormData }) => {
   return (
     <>
-      <div className="text-2xl font-medium">Skill Level</div>
-      <div className="text-sm mt-2 text-gray-500">
+      <div className="lg:text-2xl text-xl font-medium">Skill Level</div>
+      <div className="lg:text-sm text-xs mt-2 text-gray-500">
         Please tell us about your skill level in frontend development.
       </div>
 
-      <div className="mt-5 flex justify-between items-center font-medium gap-10">
+      <div className="mt-5 flex lg:flex-nowrap flex-wrap justify-between items-center font-medium lg:gap-10 gap-5">
         <div
           className={`flex gap-3 items-center border ${
             formData?.skillLevel === "Beginner"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } hover:border-[#E96A49] p-3 py-4 rounded-md w-1/2 cursor-pointer`}
+          } hover:border-[#E96A49] p-3 py-4 rounded-md lg:w-1/2 w-full cursor-pointer`}
           onClick={() =>
             setFormData((prev) => ({
               ...prev,
@@ -41,7 +41,7 @@ const SkillLevel: React.FC<SkillLevelProps> = ({ formData, setFormData }) => {
             formData?.skillLevel === "Intermediate"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } p-3 py-4 hover:border-[#E96A49] rounded-md w-1/2 cursor-pointer`}
+          } p-3 py-4 hover:border-[#E96A49] rounded-md lg:w-1/2 w-full cursor-pointer`}
           onClick={() =>
             setFormData((prev) => ({
               ...prev,
@@ -56,13 +56,13 @@ const SkillLevel: React.FC<SkillLevelProps> = ({ formData, setFormData }) => {
         </div>
       </div>
 
-      <div className="mt-5 flex justify-between items-center font-medium gap-10">
+      <div className="mt-5 flex lg:flex-nowrap flex-wrap justify-between items-center font-medium lg:gap-10 gap-5">
         <div
           className={`flex gap-3 items-center border ${
             formData?.skillLevel === "Advanced"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } p-3 py-4 hover:border-[#E96A49] rounded-md w-1/2 cursor-pointer`}
+          } p-3 py-4 hover:border-[#E96A49] rounded-md lg:w-1/2 w-full cursor-pointer`}
           onClick={() =>
             setFormData((prev) => ({
               ...prev,
@@ -81,7 +81,7 @@ const SkillLevel: React.FC<SkillLevelProps> = ({ formData, setFormData }) => {
             formData?.skillLevel === "Expert"
               ? "border-[#E96A49]"
               : "border-gray-300"
-          } p-3 py-4 hover:border-[#E96A49] rounded-md w-1/2 cursor-pointer`}
+          } p-3 py-4 hover:border-[#E96A49] rounded-md lg:w-1/2 w-full cursor-pointer`}
           onClick={() =>
             setFormData((prev) => ({
               ...prev,
