@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { ConfigProvider } from "antd";
 import { Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -25,20 +24,7 @@ export default function RootLayout({
         className={`${poppins.className} antialiased main_screen`}
         cz-shortcut-listen="false"
       >
-        <ConfigProvider
-          theme={{
-            token: {
-              fontFamily: "inherit",
-            },
-            components: {
-              Rate: {
-                starSize: 60,
-              },
-            },
-          }}
-        >
-          {children}
-        </ConfigProvider>
+        {children}
       </body>
     </html>
   );

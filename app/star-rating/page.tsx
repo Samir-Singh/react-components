@@ -1,12 +1,21 @@
 "use client";
 
-import { Rate } from "antd";
 import Link from "next/link";
 import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const StarRating = () => {
-  const [value, setValue] = useState(2);
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+  const [clickedIndex, setClickedIndex] = useState(3);
+
+  const handleHover = (i: number) => {
+    setHoveredIndex(i);
+  };
+
+  const handleClick = (i: number) => {
+    setClickedIndex(i);
+  };
 
   const ratingMessage = [
     "We're sorry to hear that you had a bad experience. We would like to learn more about what happened and how we can make things right.",
@@ -15,6 +24,30 @@ const StarRating = () => {
     "Thank you for your positive feedback! We'are glad to know that you had a great experience and we appreciate your support.",
     "Excellent! We'are thrilled to hear you had such a positive experience. Thank you for choosing our platform",
   ];
+
+  const renderStars = (length: number) => {
+    const stars = [];
+    for (let i = 0; i < length; i++) {
+      stars.push(
+        <FaStar
+          key={i}
+          onMouseEnter={() => handleHover(i)}
+          onClick={() => handleClick(i)}
+          onMouseLeave={() => setHoveredIndex(-1)}
+          color={
+            i <= (hoveredIndex !== -1 ? hoveredIndex : clickedIndex)
+              ? "yellow"
+              : "lightgrey"
+          }
+          size={60}
+          className={`cursor-pointer mx-1 transition-transform duration-200 ${
+            hoveredIndex === i ? "scale-110" : "scale-100"
+          }`}
+        />
+      );
+    }
+    return stars;
+  };
 
   return (
     <>
@@ -34,14 +67,10 @@ const StarRating = () => {
             How many stars would you give to our Online Code Editor?
           </div>
           <div className="flex justify-center items-center mt-5">
-            <Rate
-              // allowHalf : uncomment this line to allow the half rating
-              value={value}
-              onChange={(value) => setValue(value)}
-            />
+            {renderStars(5)}
           </div>
           <div className="text-center mt-5 lg:text-sm text-xs">
-            {ratingMessage[value - 1]}
+            {ratingMessage[clickedIndex - 1]}
           </div>
         </div>
       </div>
